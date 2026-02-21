@@ -15,7 +15,7 @@ jobs:
       
       - name: System Information
         run: |
-          Write-Host "🎯 Runner is working!" -ForegroundColor Green
+          Write-Host "Runner is working!" -ForegroundColor Green
           Write-Host "Computer Name: $env:COMPUTERNAME"
           Write-Host "User: $env:USERNAME"
           Write-Host "OS: $env:OS"
@@ -23,13 +23,13 @@ jobs:
       
       - name: Show Directory Contents
         run: |
-          Write-Host "📁 Files in workspace:" -ForegroundColor Cyan
+          Write-Host "Files in workspace:" -ForegroundColor Cyan
           Get-ChildItem
       
       - name: Create a Test File
         run: |
           "This file was created by GitHub Actions on $(Get-Date)" | Out-File -FilePath test.txt
-          Write-Host "✅ Created test.txt" -ForegroundColor Green
+          Write-Host "Created test.txt" -ForegroundColor Green
       
       - name: Verify File was Created
         run: |
